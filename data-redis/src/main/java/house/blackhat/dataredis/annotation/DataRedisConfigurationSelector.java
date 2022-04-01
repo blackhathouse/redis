@@ -5,7 +5,11 @@ import org.springframework.context.annotation.AdviceModeImportSelector;
 
 public class DataRedisConfigurationSelector extends AdviceModeImportSelector<EnableDataRedis> {
 
-    private static final String[] CLASSES = {};
+    private static final String[] CLASSES = {
+            "house.blackhat.dataredis.cachemanager.DefaultCacheManager",
+            "house.blackhat.dataredis.connectionfactory.LettuceConnectionFactoryConfig",
+            "house.blackhat.dataredis.configuration.DataRedisConfiguration"
+    };
 
     protected String[] selectImports(AdviceMode adviceMode) {
         return CLASSES;

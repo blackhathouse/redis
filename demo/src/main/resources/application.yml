@@ -1,10 +1,12 @@
 spring:
-    application:
-        name: demo
-    cache:
-        type: redis
+  application:
+    name: demo
+  cache:
+    type: redis
     redis:
-        host: localhost
-        password:
-        port: 6379
-        ssl: false
+      time-to-live: 600000
+  redis:
+    host: localhost
+    password:
+    port: 6379
+    ssl: false
